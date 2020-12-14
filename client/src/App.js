@@ -23,8 +23,9 @@ export default function App () {
         })
         
         .catch(error => {
-          debugger
           console.error('Server Error', error);
+          debugger
+          
         });
     } 
     
@@ -40,14 +41,16 @@ export default function App () {
       <SavedList list={[ /* This is stretch */]} />
     
    
-  
-      <Route path = '/movie/:{itemId}'>
-        <Movie />
+    <Route exact path = '/'>
+        <MovieList movies = {movieList}  />
       </Route>
 
-      <Route path = '/'>
-        <MovieList movies = {movieList} />
+      <Route path = '/movie/:{id}'>
+        <Movie   />
       </Route>
+
+    
+
       
      
     </div>
