@@ -7,7 +7,8 @@ export default function MovieList(props) {
  
     <div className="movie-list">
       {props.movies.map(movie => (
-           <MovieDetails key={movie.id} movie={movie}  />
+        <MovieDetails key={movie.id} movie={movie}  />
+           
            
       ))} 
     </div>
@@ -31,5 +32,6 @@ function MovieDetails(props) {
       </div>
     </div> 
     </Link> 
+    
   );
 }

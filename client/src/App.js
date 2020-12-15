@@ -23,8 +23,9 @@ export default function App () {
         })
         
         .catch(error => {
-          console.error('Server Error', error);
           debugger
+          console.error('Server Error', error);
+          
           
         });
     } 
@@ -45,7 +46,7 @@ export default function App () {
         <MovieList movies = {movieList}  />
       </Route>
 
-      <Route path = '/movie/:{id}'>
+      <Route path = '/movie/:id'>
         <Movie   />
       </Route>
 
